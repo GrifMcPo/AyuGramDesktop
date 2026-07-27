@@ -70,7 +70,7 @@ void BuildVersionInfo(SectionBuilder &builder) {
 			.widget = object_ptr<Ui::FlatLabel>(
 				ctx.container,
 				rpl::single(
-					QString("AyuGram Desktop v")
+					QString("Mod Desktop v")
 					+ QString::fromLatin1(AppVersionStr)),
 				st::boxTitle),
 			.align = style::al_top,
@@ -101,7 +101,7 @@ void BuildCategories(SectionBuilder &builder) {
 	builder.addSubsectionTitle(tr::ayu_CategoriesHeader());
 
 	builder.addSectionButton({
-		.title = rpl::single(QString("AyuGram")),
+		.title = rpl::single(QString("Мод")),
 		.targetSection = AyuGhost::Id(),
 		.icon = { &st::menuIconGroupReactions },
 	});
@@ -145,10 +145,10 @@ void BuildLinks(SectionBuilder &builder) {
 		.id = u"ayu/channel"_q,
 		.title = tr::ayu_LinksChannel(),
 		.icon = { &st::menuIconChannel },
-		.label = rpl::single(QString("@ayugram")),
+		.label = rpl::single(QString("@augrammy")),
 		.onClick = [=] {
 			controller->showPeerByLink(Window::PeerByLinkInfo{
-				.usernameOrId = QString("ayugram"),
+				.usernameOrId = QString("augrammy"),
 			});
 		},
 	});
@@ -156,10 +156,10 @@ void BuildLinks(SectionBuilder &builder) {
 		.id = u"ayu/chat"_q,
 		.title = tr::ayu_LinksChats(),
 		.icon = { &st::menuIconChats },
-		.label = rpl::single(QString("@ayugramchat")),
+		.label = rpl::single(QString("@augrammy")),
 		.onClick = [=] {
 			controller->showPeerByLink(Window::PeerByLinkInfo{
-				.usernameOrId = QString("ayugramchat"),
+				.usernameOrId = QString("augrammy"),
 			});
 		},
 	});
